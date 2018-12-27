@@ -1,8 +1,0 @@
-
-Git peut être installer sur windows/Mac/linux, voir https://git-scm.com/
-Après l'installation, utiliser "git config --global user.name "[nom]"    Pour définit le nom de l’utilisateur
-                               "git config --global user.email [email]   Pour définit l’email de l’utilisateur
-initier un depôt git avec "git init [nom_dépôt]"  ou simplement "git init" en étant à l'interieur du dossier en question
-
-
-#LES COMMITS
