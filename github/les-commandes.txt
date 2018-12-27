@@ -5,3 +5,4 @@ initier un depôt git avec "git init [nom_dépôt]"  ou simplement "git init" 
 
 
 #LES COMMITS
+test
