@@ -9,11 +9,16 @@ initier un dépôt git avec "git init [nom_dépôt]"  ou simplement "git init"
  #LES COMMITS
 
 -  Ajouter un fichier pour qu'il soit tracker ( suivie) par git  "git add fichier1.html file.css" ou "git add ." pour tous les fichiers du repertoire.
-- "git status" pour voir les fichiers tracker
+- "git status" pour voir les fichiers tracker, les fichiers modifiés 
 - "git reset file.css"  pour arrêter le tracking/indexation de file.css
 
 - "git commit -m"mon_commentaire_ici"
--
+- "git diff" la couleur rouge veut dire Supprimer, et la couleur verte veut dire Ajouter ( logiquement status-diff-add-commit ) 
+- "git log -n 10"  affiche les commits avec leur SHA-1, auteur, date, commentaire du commit
+- "git show SHA-1" permet d'afficher les details des modification inclut dans un commit
+- "git checkout SHA-1" ou "git checkout master" permet de déplacer le HEAD ( par défaut, il est sur le dernier SHA-1, du dernier commit), permet aussi de venir a la version antérieure d'un fichier
+- attaché un TAG statique du genre "HEAD" à un commit, à la différence de HEAD qui se déplace sur le dernier commit
 
+- "git checkout SHA-3"  ensuite donner le nom du TAG par "git tag toto -m"prémiere version"" ( on peut delete avec ""git tag --delete toto")
 
 
