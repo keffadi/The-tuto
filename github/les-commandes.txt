@@ -21,4 +21,7 @@ initier un dépôt git avec "git init [nom_dépôt]"  ou simplement "git init"
 
 - "git checkout SHA-3"  ensuite donner le nom du TAG par "git tag toto -m"prémiere version"" ( on peut delete avec ""git tag --delete toto")
 
+- Pour Réaliser un Pull request, faut d'abord effectuer un FORK ( commit quand le dépôt nous appartient et Pull request quand le dépôt ne nous appartient pas)
 
+- "git clone https//  clode_deMon_site " permet de copier le repository distant, ensuite "git config user.name "[nom]""
+- tag = realise sur Github
