@@ -26,3 +26,37 @@ initier un dépôt git avec "git init [nom_dépôt]"  ou simplement "git init"
 - "git clone https//  clode_deMon_site " permet de copier le repository distant, ensuite "git config user.name "[nom]""
 - tag = realise sur Github
 - tester si mon dossier distant voir mes modifs
+
+
+
+# CREATION D'UN REPOSITORY A PARTIR D'UN REPERTOIRE WEB
+
+-nano .gitignore
+ database.php
+*.wmv
+*.mpg
+*.mpeg
+*.mp4
+*.mov
+*.flv
+*.avi
+*.ogv
+*.ogg
+*.webm
+
+
+-git init 
+-git add .   ( à l'intèrieur du dossier)
+
+-git commit -m "Add existing file"
+-git remote add origin git@github.com:EcoleNaN/cursus.git (Sets the new remote) en cas d'erreur "git remote rm origin"
+-git remote -v  ( Verifies the new remote URL )
+-git pull origin master ( fetch et merge des dossier distant et local)
+-git push -u origin master  (Pushes the changes in your local repository up to the remote repository you specified as the origin)
+
+
+
+autre
+cd ~/.ssh && ssh-keygen
+nano id_rsa.pub   ( copy)
+mettre dans setting, ssh key sur website github
