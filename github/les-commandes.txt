@@ -60,3 +60,15 @@ autre
 cd ~/.ssh && ssh-keygen
 nano id_rsa.pub   ( copy)
 mettre dans setting, ssh key sur website github
+
+
+# MODIFICATION DE .gitignore
+option: grep -rnw '/home/admin/public_html/cursus/' -e 'mot de passe'
+        nan_mvc/_config/Database.php ( ajouter la ligne dans gitignore)
+   
+  1- modify .gitignore
+  2- git rm --cached -r .
+  3- git add .
+  4- git status
+  5- git commit -m" ttddd"
+  6- git push
