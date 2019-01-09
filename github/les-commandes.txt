@@ -72,3 +72,7 @@ option: grep -rnw '/home/admin/public_html/cursus/' -e 'mot de passe'
   4- git status
   5- git commit -m" ttddd"
   6- git push
+
+
+
+# clone and fetch pour les 14 équipes
