@@ -48,6 +48,9 @@ initier un dépôt git avec "git init [nom_dépôt]"  ou simplement "git init"
 -git init 
 -git add .   ( à l'intèrieur du dossier)
 
+git config --global user.email "keffa@nan.ci"
+git config --global user.name "keffa"
+
 -git commit -m "Add existing file"
 -git remote add origin git@github.com:EcoleNaN/cursus.git (Sets the new remote) en cas d'erreur "git remote rm origin"
 -git remote -v  ( Verifies the new remote URL )
