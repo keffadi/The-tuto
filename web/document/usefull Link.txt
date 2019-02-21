@@ -1,0 +1,24 @@
+https://www.diffchecker.com/    pour comparer deux code
+http://codingheroes.io/resources/   toute les ressources de jonas
+
+https://docs.emmet.io/cheat-sheet/       raccourcir clavier HTML  + > *
+https://codepen.io/     tester les bouts de code
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element   explication et definition des balises HTML
+https://css-tricks.com/snippets/html/glyphs/      caractères spéciaux
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference   toute les propriété CSS
+https://tympanus.net/codrops/css_reference/#section_css-at-rule    CSS et exemple
+https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048     30 CSS Selectors name combinaison
+
+https://daneden.github.io/animate.css/   animation de text
+
+http://www.responsivegridsystem.com/calculator/  grille calculateur
+http://bennettfeely.com/clippy/    poligone dans css
+
+https://jigsaw.w3.org/css-validator/  validator
+https://validator.w3.org/   validator
+
+https://imagecompressor.com/  compresser image
+
+https://realfavicongenerator.net/  favicon
