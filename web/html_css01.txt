@@ -1,1 +1,10 @@
+meta -> link -> title
+Clickable image <a href="img/logo.jpg"><img src="img/logo.jpg"></a>   IMAGE CLICKABLE
 
+<link rel="stylesheet" type="text/css" href="mystyle.css">     LINK CSS
+
+.class / #id  / tagname / * /
+
+inline element
+box-sizing par default est content, but il peut etre border-box
+par defaut, certaine valise ont des margin and padding
