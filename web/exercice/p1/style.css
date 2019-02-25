@@ -1,9 +1,32 @@
-h1 {
-    color: #668076;
-    font-size: 40px;
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
-.container {
-    width: 1500px;
-    color: green;
+h1 {
+    color: #803829;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.maintext {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.contenair {
+    width: 1140px;
+    background: azure;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ecri-post {
+    background: green;
+    width: 25%;
+}
+
+.img-post {
+    background: #414780;
+    width: 50%;
 }

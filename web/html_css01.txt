@@ -3,8 +3,16 @@ Clickable image <a href="img/logo.jpg"><img src="img/logo.jpg"></a>   IMAGE CLIC
 
 <link rel="stylesheet" type="text/css" href="mystyle.css">     LINK CSS
 
+
+
+
+------------------------- CSS ----------------------------
+
+
 .class / #id  / tagname / * /
 
-inline element
-box-sizing par default est content, but il peut etre border-box
+inline element (exple: strong, em, img, link) vs block element (exemple: content h1 or p)
+box-sizing par default est content, but il peut etre border-box ( box-sizing: border-box;)
 par defaut, certaine valise ont des margin and padding
+
+margin auto left & right permet de centrer un élément
