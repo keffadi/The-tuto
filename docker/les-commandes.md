@@ -73,3 +73,79 @@ uname -n
    
 docker ps
 	container en ligne
+	
+docker images --> docker history "imageID"
+ image ID can be c2dhs45dddk  or c2d ( juste les premier lettre)
+ 
+LES MODIFICATION faites dans un fichier dans le Contenair sont TEMPORAIRE (--RM)
+
+docker ps --help
+	pour voir les options d'une commande
+	
+docker run
+	 il crée toujour un nouveau conteneur
+	 
+docker start -ai gifted_swartz
+	a spécifier le NAME du contenair
+	i pour interactive bash
+	gifted-swart est le nom du contenair
+	
+une images est constitué de plusieurs couches, sauf la dernière est READ/WRITE, les autres sont en lecture seule
+
+
+------ VOLUME ----
+
+store contenair data on host 
+echo >> /test
+	ecrit a la suite de la dernière ligne
+	
+docker run -ti --rm -v $(pwd)/fichier:/test:ro bash 
+	ro for read only
+	$(pwd) is contenair side
+	
+	
+---- RESEAU ----
+docker run --rm -p 8080:80  nginx
+ mappage de port 80,
+ 8080 is from host side
+
+
+netstat -nate
+	avoir les ports déjà ouvet
+	
+docker inspect "name of running contenair"
+	donne plus d'info sur l'image
+	
+	
+--- CREATION D4IMAGE a partir d'autre IMAGE ----
+dockerfile
+ FROM php:7.0.31-cli (source de l'image avec sa version)
+ RUN apt-get update
+ RUN apt-get install -y libxmls-dev
+ 
+docker build -t php_libxmls:7.0.31-keff   .
+ le nom par defaut est Dockerfile, sinon -f mondockerfile .
+ t pour TAG
+ 
+
+---- NetWork ------
+network bridge est utilisé quand on ne précise pas de reseau
+
+docker network create --driver=bridge mon_bridge
+
+docker network ls
+	liste les réseaux existant
+
+docker run -ti --rm --network=mon-bridge --name=mon_server bash
+
+brigde cloné ont un DNS, donc peuvent etre pingué par leur nom
+
+docker network --help
+
+docker network connect mon_bridge server01
+  connecter un contenair a un autre bridge
+  
+--network=host
+	pour eviter la mappage, les ports des contenairs = port host
+
+
