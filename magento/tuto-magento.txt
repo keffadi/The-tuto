@@ -1,0 +1,21 @@
+## MAGENTO
+
+- ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'myrootpassword';     (cas docker, connection à la DB du docker MYSQL)
+
+
+1- download and unzip file in /var/www/html
+2- check file permission, if current user can rwx
+3- create database
+
+4- domine.com   or domaine.com/setup
+5- go back to your file system app->etc  then remove write permission on this folder
+
+
+---- FIX ISSU DURING INSTALLATION ----
+switch PHP version
+edit php.ini
+rebuild php with right php-extension
+
+
+---- BACK END -------
+https://www.youtube.com/watch?v=C4VoeHmTN2E&index=6&list=PLtaXuX0nEZk9eL59JGE3ny-_GAU-z5X5D
