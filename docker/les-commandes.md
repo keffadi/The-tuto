@@ -147,5 +147,65 @@ docker network connect mon_bridge server01
   
 --network=host
 	pour eviter la mappage, les ports des contenairs = port host
+	
+	
+--- Docker compose ---
+docker-compose.yml
+	version: "3"
+	services:    ( liste des contenair)
+		wordpress:
+			image:wordpress:4.9
+			port:
+				- 80:80
+			environment:
+				- WORDPRESS_DB_HOST=db
+				- WORDPRESS_DB_USER=luke 
+				- WORDPRESS_DB_PASSWORD=otherpas
+				- WORDPRESS_DB_NAME=wordp
+			networks:
+				- galaxie
+			volumes:
+				- ./data/wp:/var/www/html
+		db:
+			image: mysql:5.7
+			environment:
+				- MYSQL_ROOT_PASSWORD=monpass
+				- MYSQL_DATABASE=wordp
+				- MYSQL_USER=luke
+				- MYSQL_PASSWORD=otherpas
+			volumes:
+			- ./data/db:/var/lib/mysql
+			
+	#volumes:
+	#restart: no, always .....
+	networks:
+		- galaxie        ( nom du network bridgé est galaxy )
+		
+		
+docker-compose up -d
+	construction de l'environnement
+	- d tourner en background
+
+docker-compose logs -f
+	Crtl+C  to leave
+	
+docker-compose stop / start
+	permet d'arreter et demarrer les images
+
+docker-compose down
+	 supprime tous sauf les volumes
+	 -v pour supprimer les volumes avec
+	 
+
+---- Portainer ----
+
+docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer   ( see documentation)
+
+	
+
+
+	
+	
+
 
 
