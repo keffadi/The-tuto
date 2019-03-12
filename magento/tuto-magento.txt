@@ -18,4 +18,8 @@ rebuild php with right php-extension
 
 
 ---- BACK END -------
+
+Content -> configuration  ( titre, logo, descrition , favicon, header.metaDescription, footer )
+store -> configuration  ( country , number, timezone, currency, email sender, )
+
 https://www.youtube.com/watch?v=C4VoeHmTN2E&index=6&list=PLtaXuX0nEZk9eL59JGE3ny-_GAU-z5X5D
