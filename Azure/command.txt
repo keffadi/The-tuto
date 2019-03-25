@@ -1,0 +1,44 @@
+---   AZ-100   ----
+
+---- URL utils ----
+https://azurecitadel.com/devops/devops-projects/
+
+Here are some official Microsoft websites that you really should bookmark when studying for the 70-533 exam:
+
+--Azure Code Samples:
+https://azure.microsoft.com/en-us/resources/samples/?sort=0
+
+--Official Azure Documentation:
+https://docs.microsoft.com/en-us/azure/
+
+--Azure Citadel - Labs and Workshops
+https://azurecitadel.github.io/labs/
+
+--Azure Hands on Labs
+https://www.microsoft.com/handsonlabs/selfpacedlabs
+
+--Official Microsoft Azure YouTube Channel
+https://www.youtube.com/user/windowsazure
+
+--Official Microsoft Developer YouTube Channel
+https://www.youtube.com/channel/UCsMica-v34Irf9KVTh6xx-g
+
+--Download the Azure SDK's for PowerShell and CLI
+https://azure.microsoft.com/en-us/downloads/
+
+--Official Github Repository for PowerShell Scripts
+https://github.com/Azure/azure-powershell
+
+--Azure REST API Browser
+https://docs.microsoft.com/en-us/rest/api/?view=Azure
+
+
+
+
+---- 
+Editable dashboard
+azure many product grouped by categorie
+
+SaaS - Software as a Service  (office 365)
+IaaS - Infrastructure as a Service ( VM, Virtual Network)
+PaaS - Platform as a Service ( genre NodeJS, app Python)

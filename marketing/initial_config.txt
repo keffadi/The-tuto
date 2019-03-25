@@ -1,0 +1,8 @@
+---- we are on RouterBoard 750
+
+after reset, use port 5 
+winbox  192.168.88.1  admin / empty
+
+Default configuration
+WAN on port 01  / DHCP client/ Nat/ DNS/ Firewall
+LAN on port 02-05 Bridge / DHCP server/ 192.168.88.1/24
