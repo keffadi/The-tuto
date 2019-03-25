@@ -6,3 +6,4 @@ https://openvpn.net/vpn-server-resources/using-dd-wrt-with-openvpn-access-server
 
 
 #### in advanced VPN, ALLOW Inter-Client Communication
+enable force DNS redirection
