@@ -18,7 +18,7 @@ dpkg-reconfigure tzdata
 apt-get update
 apt-get upgrade
 apt-get dist-upgrade   ( server debian OVH)
-apt-get install mysql-server  (23Succes23)  prodiction (keffA2015)  ( kolmisoft  pour replicate)
+apt-get install mysql-server  (password)  prodiction (password)  ( kolmisoft  pour replicate)
 (faire un par un) apt-get install git-core gcc flex bison libmysqlclient-dev(apt install libmariadbclient-dev mariadb-client-10.1)  make
 (faire un par un) apt-get install libssl-dev libcurl4-openssl-dev libxml2-dev libpcre3-dev (facultatif)
 
@@ -38,7 +38,7 @@ make install
 echo $PATH  ( to see if /usr/local/sbin)
 
 
-nano -w /usr/local/etc/kamailio/kamctlrc  (DBENGINE=MYSQL & sip domaine) pass: keffa2015  ( rw & ro)  Uncomment
+nano -w /usr/local/etc/kamailio/kamctlrc  (DBENGINE=MYSQL & sip domaine) pass: pw  ( rw & ro)  Uncomment
 /usr/local/sbin/kamdbctl create
 
 nano /usr/local/etc/kamailio/kamailio.cfg  {
@@ -1955,12 +1955,12 @@ route[FWD] {
 	#allow recognized ip only
 	switch($si) {
 		# Al call test from start trinity
-		case"51.254.245.57":
-			$rd="46.105.112.67";
+		case"ip":
+			$rd="ip";
 			#$rp="5070";
 			break;
-		case"91.121.146.63":
-			$rd="91.121.83.122";
+		case"ip":
+			$rd="ip";
 			break;
 		default:
 			sl_send_reply("401"," Unauthorized");
@@ -2549,7 +2549,7 @@ if($(rU{s.len}) <= 12) {
 	
 		
 if($rU =~ "^225") {	# Cote d'ivoire
-	if(($si=="64.125.111.10") or ($si=="185.35.144.123") or ($si=="185.35.144.124")) {
+	if(($si=="ip") or ($si=="ip") or ($si=="ip")) {
 		# Premium
 		sql_query("numbering_cn", "call `prok21`(\"$fU\", \"$rU\")","resultat");
 	} else {
@@ -2585,7 +2585,7 @@ if($rU =~ "^225") {	# Cote d'ivoire
 	exit;
 }
 
-GRANT ALL ON numbering.* TO cheap@'94.23.31.19' IDENTIFIED BY 'keffa2015';
+GRANT ALL ON numbering.* TO cheap@'94.23.31.19' IDENTIFIED BY 'pw';
 
 update db set Host='94.23.31.19' where Db='numbering';
 update user set Host='94.23.31.19' where user='cheap';
@@ -2599,30 +2599,30 @@ GRANT ALL ON *.* TO 'copy'@'%' IDENTIFIED BY 'copier';
 ---------------------------------------
  
 			
-		case"91.200.204.100":      #ABHTELECOM  
+		case"ip":      #USER3  
 			$rU="490" + $rU;
 			break;
-		case"91.200.204.110":      #ABHTELECOM
+		case"ip":      #USER3
 			$rU="490" + $rU;
 			break;
-		case"91.200.205.180":      #ABHTELECOM
+		case"ip":      #USER3
 			$rU="490" + $rU;
 			break;
-		case"41.242.34.104":      #KEFFA test sur evox
+		case"ip5":      #K
 			$rU="486" + $rU;
 		
 		
 
 
 
-case"91.200.204.100":      #ABHTELECOM
+case"91.200.204.100":      #USER3
 			$rd="46.105.112.67";
 			break;
-		case"91.200.204.110":      #ABHTELECOM
-			$rd="46.105.112.67";
+		case"ip":      #USER3
+			$rd="ip";
 			break;
-		case"91.200.205.180":      #ABHTELECOM
-			$rd="46.105.112.67";
+		case"ip":      #USER3
+			$rd="ip";
 			break;
 			
 			
@@ -2653,28 +2653,27 @@ case"91.200.204.100":      #ABHTELECOM
 			} else {---
 			
 			
-87.98.213.41			
-69.46.233.226			
+				
 			---------
 -- ASR for all			
 select round((sum(case when `duration`> 0 then 1 else 0 end) / count(`src_username`))*100)  ASR
-from `collection_cdrs` where DATE(`call_start_time`)= CURDATE() and `src_domain`='64.125.111.10'
+from `collection_cdrs` where DATE(`call_start_time`)= CURDATE() and `src_domain`='ip'
 
--- Duration for all, and 382 comm
+-- Duration for all, and USER01
 select SEC_TO_TIME(sum(`duration`))   Duration
 from `collection_cdrs` where DATE(`call_start_time`)= CURDATE()
 
 select SEC_TO_TIME(sum(`duration`))   Duration
-from `collection_cdrs` where DATE(`call_start_time`)= CURDATE() and `src_domain`='64.125.111.10'
+from `collection_cdrs` where DATE(`call_start_time`)= CURDATE() and `src_domain`='ip'
  
 
 ---ACD
 select SEC_TO_TIME(sum(duration)/ sum(case when `duration` > 0 then 1 else 0 end))  ACD
 from `collection_cdrs` where DATE(`call_start_time`)= CURDATE()
 
----382Comm ACD
+---USER1 ACD
 select SEC_TO_TIME(sum(duration)/ sum(case when `duration` > 0 then 1 else 0 end))  ACD
-from `collection_cdrs` where DATE(`call_start_time`)= CURDATE() and `src_domain`='87.98.213.41'
+from `collection_cdrs` where DATE(`call_start_time`)= CURDATE() and `src_domain`='ip'
  
 -- ANSWERED
 select sum(case when `duration`> 0 then 1 else 0 end) answerd
@@ -2683,7 +2682,7 @@ from `collection_cdrs` where DATE(`call_start_time`)<= CURDATE()- INTERVAL 1 DAY
 
  _____ JOUR AVANT 
  select SEC_TO_TIME(sum(`duration`))   Duration
-from `collection_cdrs` where DATE(`call_start_time`)= CURDATE() - INTERVAL 1 DAY and `src_domain`='64.125.111.10'
+from `collection_cdrs` where DATE(`call_start_time`)= CURDATE() - INTERVAL 1 DAY and `src_domain`='ip'
 
 ---- hier simberry duration
 select SEC_TO_TIME(sum(`duration`))   Duration
@@ -2697,46 +2696,38 @@ acd simberry
 select SEC_TO_TIME(sum(duration)/ sum(case when `duration` > 0 then 1 else 0 end))  ACD
 from `collection_cdrs` where DATE(`call_start_time`)= CURDATE() - INTERVAL 1 DAY and `dst_username` LIKE '6288%'
 
---------------------------------- BILLING 382com-------------------------------------
+--------------------------------- BILLING USER01-------------------------------------
 
 select sum(case when `duration`> 0 then 1 else 0 end) answerd
-from `collection_cdrs` where DATE(`call_start_time`)<= CURDATE()- INTERVAL 1 DAY and `src_domain`='64.125.111.10'
+from `collection_cdrs` where DATE(`call_start_time`)<= CURDATE()- INTERVAL 1 DAY and `src_domain`='ip'
 
 select round((sum(case when `duration`> 0 then 1 else 0 end) / count(`src_username`))*100)  ASR
-from `collection_cdrs` where DATE(`call_start_time`)<= CURDATE()- INTERVAL 1 DAY and `src_domain`='64.125.111.10'
+from `collection_cdrs` where DATE(`call_start_time`)<= CURDATE()- INTERVAL 1 DAY and `src_domain`='ip'
 
 select SEC_TO_TIME(sum(duration)/ sum(case when `duration` > 0 then 1 else 0 end))  ACD
-from `collection_cdrs` where DATE(`call_start_time`)<= CURDATE()- INTERVAL 1 DAY and `src_domain`='64.125.111.10'
+from `collection_cdrs` where DATE(`call_start_time`)<= CURDATE()- INTERVAL 1 DAY and `src_domain`='ip'
 
 select SEC_TO_TIME(sum(`duration`))   Duration
-from `collection_cdrs` where DATE(`call_start_time`)<= CURDATE()- INTERVAL 1 DAY and `src_domain`='64.125.111.10'
+from `collection_cdrs` where DATE(`call_start_time`)<= CURDATE()- INTERVAL 1 DAY and `src_domain`='ip'
 
 
---------------------------------- BILLING EVOX-------------------------------------
+--------------------------------- BILLING USER02-------------------------------------
 select sum(`duration`)/60   Duration
-from `collection_cdrs` where DATE(`call_start_time`) > "2018-04-01" and `src_domain`='87.98.213.41'
+from `collection_cdrs` where DATE(`call_start_time`) > "2018-04-01" and `src_domain`='ip'
 
 select sum(case when `duration`> 0 then 1 else 0 end) answerd
-from `collection_cdrs` where DATE(`call_start_time`) > "2018-04-01" and `src_domain`='87.98.213.41'
+from `collection_cdrs` where DATE(`call_start_time`) > "2018-04-01" and `src_domain`='ip'
 
 select round((sum(case when `duration`> 0 then 1 else 0 end) / count(`src_username`))*100)  ASR
-from `collection_cdrs` where DATE(`call_start_time`) > "2018-04-01" and `src_domain`='87.98.213.41'
+from `collection_cdrs` where DATE(`call_start_time`) > "2018-04-01" and `src_domain`='ip'
 
 
 select SEC_TO_TIME(sum(duration)/ sum(case when `duration` > 0 then 1 else 0 end))  ACD
-from `collection_cdrs` where DATE(`call_start_time`) > "2018-04-01" and `src_domain`='87.98.213.41'
+from `collection_cdrs` where DATE(`call_start_time`) > "2018-04-01" and `src_domain`='ip'
 
 				------------------
 				
 update allow set status=0
 				
 				----------------
-*100#     bonus moov
-Bonus:
 
-IZY HEURE
-*303*1*5#
-MinMoov 
-Vous n[END]
-
-[ENTER],[ENTER],-
