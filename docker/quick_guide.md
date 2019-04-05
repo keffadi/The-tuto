@@ -45,7 +45,7 @@ docker run -d --net=host --name kamailio -v /etc/kamailio:/etc/kamailio kamailio
 **Connect MariaDB to Kamailio**
 
 a- image MariaDB + custom docker network with gateway    
-b- nano etc/kamailio/kamctlrc  (DBENGINE=MYSQL / DBHOST=192.168.0.2)    
+b- nano etc/kamailio/kamctlrc  (DBENGINE=MYSQL / DBHOST=192.168.0.2  / DBACCESSHOST=192.168.0.2)    
 c- kamctl create   
 
 d- kamailio.cfg     
@@ -57,4 +57,7 @@ d- kamailio.cfg
 ```
 ```
 DBURL "mysql://kamailio:kamailiorw@192.168.0.2/kamailio"
+```
+```
+kamailio restart
 ```
