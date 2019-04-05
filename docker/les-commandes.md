@@ -33,61 +33,76 @@ apt-get install docker-ce docker-ce-cli containerd.io
 docker run hello-world
 docker --version
 ```
-------------------------------- FIN Installation Completed on Debian Stretch --------------------------
+
+------------------------------- FIN Installation Completed on Debian Stretch ------------------------
 
 
-
+.
 
 ------------------------------- Install Docker Compose -----------------------------------------------
 https://docs.docker.com/compose/install/
-
+```
 curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
 chmod +x /usr/local/bin/docker-compose
-
 docker-compose --version
------------------------------ Fin  Install Docker Compose --------------------------------------------------------------
+```
+-------------------------- Fin  Install Docker Compose -----------------------------------------------
 
-
+.
 
 -----------------------------Utilisation --------------------------------------------------------------
 
 https://training.play-with-docker.com/    training  ( durée de vie des contenair 4 h)
-
+```
 docker run --rm bash echo salut
+```
 --rm  détruit le container apres avoir monté l'image
 bash:3.2  ( la version peut etre specifier)
 
-
+```
 docker images
- liste des images dans le repository local 
- on peut avoir deux version d'une meme image
+```
+liste des images dans le repository local 
+on peut avoir deux version d'une meme image
 
-
+```
 docker run -ti --rm bash 
+```
  -ti  ouvre un putty, bash#
- 
+
+```
 uname -n 
-   nom de l'hote ou Tag du container
-   
+```
+nom de l'hote ou Tag du container
+ 
+ ```
 docker ps
-	container en ligne
+```
+container en ligne
 	
 docker images --> docker history "imageID"
  image ID can be c2dhs45dddk  or c2d ( juste les premier lettre)
  
 LES MODIFICATION faites dans un fichier dans le Contenair sont TEMPORAIRE (--RM)
 
+```
 docker ps --help
-	pour voir les options d'une commande
-	
+```
+pour voir les options d'une commande
+
+```
 docker run
-	 il crée toujour un nouveau conteneur
-	 
+```
+il crée toujour un nouveau conteneur
+
+```
 docker start -ai gifted_swartz
-	a spécifier le NAME du contenair
-	i pour interactive bash
-	gifted-swart est le nom du contenair
+```
+a spécifier le NAME du contenair
+i pour interactive bash
+gifted-swart est le nom du contenair
+	
 	
 une images est constitué de plusieurs couches, sauf la dernière est READ/WRITE, les autres sont en lecture seule
 
@@ -95,60 +110,79 @@ une images est constitué de plusieurs couches, sauf la dernière est READ/WRITE
 ------ VOLUME ----
 
 store contenair data on host 
+```
 echo >> /test
-	ecrit a la suite de la dernière ligne
-	
+```
+ecrit a la suite de la dernière ligne
+```	
 docker run -ti --rm -v $(pwd)/fichier:/test:ro bash 
-	ro for read only
-	$(pwd) is contenair side
+```
+ro for read only
+$(pwd) is contenair side
 	
 	
 ---- RESEAU ----
+```
 docker run --rm -p 8080:80  nginx
- mappage de port 80,
- 8080 is from host side
+```
+mappage de port 80,
+8080 is from host side
 
-
+```
 netstat -nate
-	avoir les ports déjà ouvet
-	
+```
+avoir les ports déjà ouvet
+
+```	
 docker inspect "name of running contenair"
-	donne plus d'info sur l'image
+```
+donne plus d'info sur l'image
 	
 	
---- CREATION D4IMAGE a partir d'autre IMAGE ----
+--- CREATION D'IMAGE a partir d'autres IMAGEs ----
 dockerfile
+```
  FROM php:7.0.31-cli (source de l'image avec sa version)
  RUN apt-get update
  RUN apt-get install -y libxmls-dev
  
+ 
 docker build -t php_libxmls:7.0.31-keff   .
- le nom par defaut est Dockerfile, sinon -f mondockerfile .
- t pour TAG
+```
+le nom par defaut est Dockerfile, sinon -f mondockerfile .
+t pour TAG
  
 
 ---- NetWork ------
 network bridge est utilisé quand on ne précise pas de reseau
-
+```
 docker network create --driver=bridge mon_bridge
-
+```
+```
 docker network ls
-	liste les réseaux existant
+```
+liste les réseaux existant
+```
 
 docker run -ti --rm --network=mon-bridge --name=mon_server bash
+```
 
 brigde cloné ont un DNS, donc peuvent etre pingué par leur nom
 
+```
 docker network --help
-
+```
+```
 docker network connect mon_bridge server01
-  connecter un contenair a un autre bridge
+```
+connecter un contenair a un autre bridge
   
 --network=host
 	pour eviter la mappage, les ports des contenairs = port host
 	
 	
 --- Docker compose ---
+```
 docker-compose.yml
 	version: "3"
 	services:    ( liste des contenair)
@@ -194,12 +228,13 @@ docker-compose stop / start
 docker-compose down
 	 supprime tous sauf les volumes
 	 -v pour supprimer les volumes avec
-	 
+
+```
 
 ---- Portainer ----
-
+```
 docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer   ( see documentation)
-
+```
 	
 
 
