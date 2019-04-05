@@ -17,3 +17,22 @@ docker ps
 
 Chrome -> ip:9000  then set admin / 2xSxxxxxx3    
 choose *Local_Manage the local Docker environment*
+
+
+
+
+### 3- Use case with docker pull kamailio/pkg-kamailio-docker
+
+https://hub.docker.com/r/kamailio/kamailio-ci
+
+https://github.com/ReadyTalk/kamailio-docker/blob/master/README.md
+
+Before first run need to prepare kamailio default config files. If you already have kamailio config files, then you can skip this. To prepare default config files need to execute
+```
+docker create --name kamailio kamailio/kamailio-ci
+docker cp kamailio:/etc/kamailio /etc
+docker rm kamailio
+
+( not verifier, i use portenair to enable start kamailio contenair )
+docker run --net=host --name kamailio -v /etc/kamailio:/etc/kamailio kamailio/kamailio-ci -m 64 -M 8
+```
