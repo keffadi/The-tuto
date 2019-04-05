@@ -4,7 +4,7 @@
 - Docker CE est different selon la distribution Linux
 
 
------------------------------ Docker ROOT installation Debian 9 --------------------------------------
+## Docker ROOT installation Debian 9 
 ```
 apt-get update
 apt-get install \
@@ -34,12 +34,12 @@ docker run hello-world
 docker --version
 ```
 
-------------------------------- FIN Installation Completed on Debian Stretch ------------------------
+*FIN Installation Completed on Debian Stretch*
 
 
 .
 
-------------------------------- Install Docker Compose -----------------------------------------------
+### Install Docker Compose 
 https://docs.docker.com/compose/install/
 ```
 curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -47,11 +47,11 @@ curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compo
 chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 ```
--------------------------- Fin  Install Docker Compose -----------------------------------------------
+*Fin  Install Docker Compose*
 
 .
 
------------------------------Utilisation --------------------------------------------------------------
+### Utilisation
 
 https://training.play-with-docker.com/    training  ( durée de vie des contenair 4 h)
 ```
