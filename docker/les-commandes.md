@@ -140,6 +140,7 @@ donne plus d'info sur l'image
 	
 	
 --- **CREATION D'IMAGE a partir d'autres IMAGEs** ----
+
 dockerfile
 ```
  FROM php:7.0.31-cli (source de l'image avec sa version)
@@ -154,6 +155,7 @@ t pour TAG
  
 
 ---- **NetWork** ------
+
 network bridge est utilisé quand on ne précise pas de reseau
 ```
 docker network create --driver=bridge mon_bridge
