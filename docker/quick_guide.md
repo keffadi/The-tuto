@@ -33,5 +33,6 @@ docker create --name kamailio kamailio/kamailio-ci
 docker cp kamailio:/etc/kamailio /etc
 docker rm kamailio
 
+( run docker rm each time before docker run )
 docker run --net=host --name kamailio -v /etc/kamailio:/etc/kamailio kamailio/kamailio-ci -m 64 -M 8
 ```
