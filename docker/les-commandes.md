@@ -107,7 +107,7 @@ gifted-swart est le nom du contenair
 une images est constitué de plusieurs couches, sauf la dernière est READ/WRITE, les autres sont en lecture seule
 
 
------- VOLUME ----
+------ **VOLUME** ----
 
 store contenair data on host 
 ```
@@ -139,7 +139,7 @@ docker inspect "name of running contenair"
 donne plus d'info sur l'image
 	
 	
---- CREATION D'IMAGE a partir d'autres IMAGEs ----
+--- **CREATION D'IMAGE a partir d'autres IMAGEs** ----
 dockerfile
 ```
  FROM php:7.0.31-cli (source de l'image avec sa version)
@@ -153,7 +153,7 @@ le nom par defaut est Dockerfile, sinon -f mondockerfile .
 t pour TAG
  
 
----- NetWork ------
+---- **NetWork** ------
 network bridge est utilisé quand on ne précise pas de reseau
 ```
 docker network create --driver=bridge mon_bridge
@@ -181,7 +181,7 @@ connecter un contenair a un autre bridge
 	pour eviter la mappage, les ports des contenairs = port host
 	
 	
---- Docker compose ---
+--- **Docker compose** ---
 ```
 docker-compose.yml
 	version: "3"
@@ -231,7 +231,7 @@ docker-compose down
 
 ```
 
----- Portainer ----
+---- **Portainer** ----
 ```
 docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer   ( see documentation)
 ```
