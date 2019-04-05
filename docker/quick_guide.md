@@ -36,3 +36,8 @@ docker rm kamailio
 ( run docker rm each time before docker run )
 docker run --net=host --name kamailio -v /etc/kamailio:/etc/kamailio kamailio/kamailio-ci -m 64 -M 8
 ```
+
+RUN in background
+```
+docker run - d --net=host --name kamailio -v /etc/kamailio:/etc/kamailio kamailio/kamailio-ci -m 64 -M 8  
+```
