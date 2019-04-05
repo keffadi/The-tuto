@@ -29,7 +29,7 @@ https://github.com/ReadyTalk/kamailio-docker/blob/master/README.md
 
 Before first run need to prepare kamailio default config files. If you already have kamailio config files, then you can skip this. To prepare default config files need to execute
 ```
-docker create --name kamailio kamailio/kamailio-ci
+docker create --name kamailio kamailio/kamailio:5.2.2-bionic
 docker cp kamailio:/etc/kamailio /etc
 docker rm kamailio
 
