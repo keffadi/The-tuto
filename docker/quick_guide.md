@@ -41,3 +41,8 @@ RUN in background
 ```
 docker run -d --net=host --name kamailio -v /etc/kamailio:/etc/kamailio kamailio/kamailio:5.2.2-bionic -m 64 -M 8  
 ```
+
+**Connect MariaDB to Kamailio**
+a- image MariaDB + custom docker network with gateway
+b- nano etc/kamailio/kamctlrc  (DBENGINE=MYSQL / DBHOST=192.168.0.2)
+c- kamctl create
