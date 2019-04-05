@@ -86,7 +86,7 @@ docker images --> docker history "imageID"
  
 LES MODIFICATION faites dans un fichier dans le Contenair sont TEMPORAIRE (--RM)
 
-```
+```diff
 docker ps --help
 ```
 pour voir les options d'une commande
