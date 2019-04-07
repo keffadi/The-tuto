@@ -48,6 +48,10 @@ a- image MariaDB + custom docker network with gateway
 b- nano etc/kamailio/kamctlrc  (DBENGINE=MYSQL / DBHOST=192.168.0.2  / DBACCESSHOST=192.168.0.2)    
 c- kamctl create   
 
+**Issu**
+Go to MariaDB, change kamailio(rw/ro) user to be access from %
+
+
 d- kamailio.cfg     
 ```
 #!define WITH_MYSQL
