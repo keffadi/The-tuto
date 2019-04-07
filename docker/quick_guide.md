@@ -65,3 +65,29 @@ DBURL "mysql://kamailio:kamailiorw@192.168.0.2/kamailio"
 ```
 kamailio restart
 ```
+## FINISH
+
+usefull command
+```
+ngrep -d any -qt -W byline "CSeq: [0-9]+ (INVITE|ACK|CANCEL|BYE)" port 5060
+kamailio restart
+kamailio -M 8 -E -e -dd  (Debug)
+netstat -altpn ( to show and kill PID)( apt-get install net-tools -> intall netstat)
+mysqladmin -u root -pkolmisoft flush-hosts ( need to it to run Kamailio after rash )
+
+```
+
+INSTALL RTPPROXY
+```
+cd /usr/local/src/
+git clone -b master https://github.com/sippy/rtpproxy.git
+git -C rtpproxy submodule update --init --recursive
+cd rtpproxy
+./configure
+make
+make install
+rtpproxy -l ip -s udp:localhost:7722  ( NOUBLIE PAS DE CHANGER DE IP) # rtpproxy -F -l 176.31.229.216 -s udp:localhost:7722 
+*rtpproxy -F -l 94.23.31.19 -s udp:localhost:7722*
+*rtpproxy -F -l 145.239.169.63 -s udp:localhost:7722*
+rtpproxy -l ip -s udp:*:7722 
+```
