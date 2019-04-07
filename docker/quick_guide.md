@@ -21,9 +21,9 @@ choose *Local_Manage the local Docker environment*
 
 
 
-### 3- Use case with docker pull kamailio/kamailio-ci
+### 3- Use case with docker pull kamailio/kamailio
 
-https://hub.docker.com/r/kamailio/kamailio-ci
+https://hub.docker.com/r/kamailio/kamailio
 
 https://github.com/ReadyTalk/kamailio-docker/blob/master/README.md
 
