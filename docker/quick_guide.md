@@ -21,7 +21,7 @@ choose *Local_Manage the local Docker environment*
 
 
 
-### 3- Use case with docker pull kamailio/kamailio
+### 3- Use case with docker pull kamailio/kamailio:5.2.2-stretch
 
 https://hub.docker.com/r/kamailio/kamailio
 
@@ -29,17 +29,17 @@ https://github.com/ReadyTalk/kamailio-docker/blob/master/README.md
 
 Before first run need to prepare kamailio default config files. If you already have kamailio config files, then you can skip this. To prepare default config files need to execute
 ```
-docker create --name kamailio kamailio/kamailio:5.2.2-bionic
+docker create --name kamailio kamailio/kamailio:5.2.2-stretch
 docker cp kamailio:/etc/kamailio /etc
 docker rm kamailio
 
 ( run docker rm each time before docker run )
-docker run --net=host --name kamailio -v /etc/kamailio:/etc/kamailio kamailio/kamailio:5.2.2-bionic -m 64 -M 8
+docker run --net=host --name kamailio -v /etc/kamailio:/etc/kamailio kamailio/kamailio:5.2.2-stretch -m 64 -M 8
 ```
 
 RUN in background
 ```
-docker run -d --net=host --name kamailio -v /etc/kamailio:/etc/kamailio kamailio/kamailio:5.2.2-bionic -m 64 -M 8  
+docker run -d --net=host --name kamailio -v /etc/kamailio:/etc/kamailio kamailio/kamailio:5.2.2-stretch -m 64 -M 8  
 ```
 
 **Connect MariaDB to Kamailio**
