@@ -77,7 +77,11 @@ mysqladmin -u root -pkolmisoft flush-hosts ( need to it to run Kamailio after ra
 
 ```
 
-INSTALL RTPPROXY
+INSTALL RTPPROXY ( must be installed on Host, not in the contenair)
+*dependencies*
+```
+sudo apt-get install git-core gcc flex bison libxml2-dev libpcre3-dev
+```
 ```
 cd /usr/local/src/
 git clone -b master https://github.com/sippy/rtpproxy.git
@@ -86,8 +90,7 @@ cd rtpproxy
 ./configure
 make
 make install
-rtpproxy -l ip -s udp:localhost:7722  ( NOUBLIE PAS DE CHANGER DE IP) # rtpproxy -F -l 176.31.229.216 -s udp:localhost:7722 
 *rtpproxy -F -l 94.23.31.19 -s udp:localhost:7722*
 *rtpproxy -F -l 145.239.169.63 -s udp:localhost:7722*
-rtpproxy -l ip -s udp:*:7722 
+rtpproxy -l ip -s udp:*:7722 ( to match all interface when we have multiple public IP on same Host )
 ```
