@@ -1,4 +1,4 @@
-# FAILLED, have to update processs with "Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock"
+# FAILLED with "Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock"
 
 ### 1- Installation de Kamailio 5.X sur Ubuntu 18.04 Bionic
 
