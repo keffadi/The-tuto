@@ -61,7 +61,7 @@ git config --global user.name "keffa"
 
 autre
 cd ~/.ssh && ssh-keygen
-nano id_rsa.pub   ( copy)
+cat id_rsa.pub   ( copy)
 mettre dans setting, ssh key sur website github
 
 
