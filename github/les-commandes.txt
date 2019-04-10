@@ -46,7 +46,7 @@ initier un dépôt git avec "git init [nom_dépôt]"  ou simplement "git init"
 
 
 
-### LE DOSSIER DISTANT DOIT ETRE VIDE
+### LE DOSSIER DISTANT ou GITHUB DOIT ETRE VIDE
 
 -git init 
 -git add .   ( à l'intèrieur du dossier)
@@ -57,7 +57,10 @@ git config --global user.name "keffa"
 -git commit -m "Add existing file"
 -git remote add origin git@github.com:EcoleNaN/cursus.git (Sets the new remote) en cas d'erreur "git remote rm origin"
 -git remote -v  ( Verifies the new remote URL )
--git pull origin master ( fetch et merge des dossier distant et local)
+
+-git push origin master ( quand le dossier github est vide)
+
+-git pull origin master ( fetch et merge des dossier distant )
 -git push -u origin master  (Pushes the changes in your local repository up to the remote repository you specified as the origin)
 
 
