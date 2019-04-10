@@ -45,6 +45,9 @@ initier un dépôt git avec "git init [nom_dépôt]"  ou simplement "git init"
 *.webm
 
 
+
+### LE DOSSIER DISTANT DOIT ETRE VIDE
+
 -git init 
 -git add .   ( à l'intèrieur du dossier)
 
