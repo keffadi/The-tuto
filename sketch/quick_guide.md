@@ -11,3 +11,7 @@
 # Good To Knows
 
 - create / delete page
+- Choose layer & hold cmd+option to move any layer
+- scale layer botton = resize by percent
+- edit botton = allow to transform rectangle to polygone
+- Combine to layer with Union / subtract / intersect / Difference
