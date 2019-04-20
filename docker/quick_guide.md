@@ -65,6 +65,19 @@ DBURL "mysql://kamailio:kamailiorw@192.168.0.2/kamailio"
 ```
 kamailio restart
 ```
+
+### 4-Mysql5:7
+ after downloaded image, launch
+ ```
+ sudo docker run --name mysql57_01 -e MYSQL_ROOT_PASSWORD=n@n2019 -d mysql:5.7
+ -p 3307:3306 (optionnel)
+ ```
+ 
+ ### 3-Prestashop
+ ```
+  sudo docker run -ti --name prestashop01 --network prestashop_ntw -e DB_SERVER=mysql57_01 -p 8081:80 -d prestashop/prestashop
+ ```
+ 
 ## FINISH
 
 usefull command
