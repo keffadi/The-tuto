@@ -88,7 +88,7 @@ output: insert another first string here : hello NaN, then second word here hell
 
 ```
 
-LIST
+LISTs
 ```
 mylist = [3,'ok',34,'une patate',[1,2,3]]
 print(mylist)
@@ -137,4 +137,53 @@ mylist = [3,'ok',34,'une patate',[1,2,3]]
 print(mylist[-1][0])
 output: 1
 
+matrix = [[1,2,3],[4,5,6],[7,8,9]]
+first_col = [row[0] for row in matrix]
+print(first_col)
+output: [1, 4, 7]
+
+
 ```
+
+DICTIONARIEs
+```
+myDict = {"01_Mai":"Mercredi","02_Mai":"jeudi","03_Mai":"Vendredi","key4":2020}
+print(myDict)
+output: {'01_Mai': 'Mercredi', '02_Mai': 'jeudi', '03_Mai': 'Vendredi','key4':2020}
+
+print(myDict["01_Mai"])
+output: Mercredi
+
+myDict = {"01_Mai":"Mercredi","02_Mai":"jeudi","03_Mai":"Vendredi","key4":{123:[1,2,'jesuisla']}}
+print(myDict["key4"][123][2])
+output:jesuisla
+
+print(myDict["key4"][123][2].upper())
+output: JESUISLA
+
+myDict[01_Mai] = "ANY"  # can be use to update a value or add "key":"value"
+
+```
+
+TUPLEs, SETs and BOOLEANs
+```
+my_tuple = (1, "ok", "olivier")  # is immutable, can't be modify
+thisset = {"apple", "banana", "cherry"}    # You cannot access items in a set by referring to an index, unordered.
+Boolean are just true or false
+
+my_tuple = (1, "ok", "olivier")
+print(my_tuple[2])
+outpot:olivier
+
+mySet = set()
+mySet.add('keffa')
+mySet.add('malouda')
+print(mySet)
+output: {'malouda', 'keffa'}
+
+
+
+
+```
+
+
