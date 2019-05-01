@@ -112,5 +112,29 @@ mylist.append('new item')
 print(mylist)
 output: [3, 'ok', 34, 'une patate', [1, 2, 3], 'new item']
 
+mylist.extend(['a','b','c'])     # ['a','b','c'] can be myOtherlistVar, extend include list content to list, defferent of append
+print(mylist)
+output: [3, 'ok', 34, 'une patate', [1, 2, 3], 'a', 'b', 'c']
+
+mylist = [3,'ok',34,'une patate',[1,2,3]]
+itempoped = mylist.pop()
+print(mylist)
+print(itempoped)
+output:[3, 'ok', 34, 'une patate']
+output:[1, 2, 3]
+
+mylist = [3,'ok',34,'une patate',[1,2,3]]
+mylist.reverse()
+print(mylist)
+output: [[1, 2, 3], 'une patate', 34, 'ok', 3]
+
+mylist = [3,7,30,24,23,5,5,8]
+mylist.sort()
+print(mylist)
+output: [3, 5, 5, 7, 8, 23, 24, 30]
+
+mylist = [3,'ok',34,'une patate',[1,2,3]]
+print(mylist[-1][0])
+output: 1
 
 ```
