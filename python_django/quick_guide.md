@@ -11,6 +11,7 @@ integer = 23
 Floating point number = 23.000    
 string = 'hello'   ```#  "hello" / myvar = "j'ai mange"  / myvar = 'j\'ai mange' ```
 
+
 in Terminal
 ```
 python
@@ -84,5 +85,32 @@ output: insert another first string here : hello world, then second word here he
 total = 'insert another first string here : {b}, then second word here {a}'.format(a='hello world', b='hello NaN')
 print(total)
 output: insert another first string here : hello NaN, then second word here hello world
+
+```
+
+LIST
+```
+mylist = [3,'ok',34,'une patate',[1,2,3]]
+print(mylist)
+output: [3, 'ok', 34, 'une patate', [1, 2, 3]]`
+
+print(len(list))
+output: 5
+
+print(mylist[1])
+output: ok
+
+print(mylist[-1])
+output: [1, 2, 3]
+
+mylist = [3,'ok',34,'une patate',[1,2,3]]
+mylist[-1] = 'keffadi'
+print(mylist)
+output: [3, 'ok', 34, 'une patate', 'keffadi']
+
+mylist.append('new item')
+print(mylist)
+output: [3, 'ok', 34, 'une patate', [1, 2, 3], 'new item']
+
 
 ```
