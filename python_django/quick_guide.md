@@ -51,11 +51,38 @@ total = 'abcdef'
 print(total[::3])
 output: ad   # write, jump, jump, write, jump, jump
 ```
-Upper, Lower
+Upper, Lower, Capitalize, split
 ```
 total = 'abcdef'
 new_var = total.upper()
 print(new_var)
+output: ABCDEF
+
+total = 'hello world'
+new_var = total.split()
+print(new_var)
+output: ['hello', 'world']
+
+total = 'hello world'
+new_var = total.split('o')
+print(new_var)
+output: ['hell', ' w', 'rld']
+
 
 upper can be: lower, split, replace ...........
+```
+insert another string in string
+```
+total = 'insert another string here : {}'.format('hello world')
+print(total)
+output: insert another string here : hello world
+
+total = 'insert another first string here : {}, then second word here {}'.format('hello world', 'hello NaN')
+print(total)
+output: insert another first string here : hello world, then second word here hello NaN
+
+total = 'insert another first string here : {b}, then second word here {a}'.format(a='hello world', b='hello NaN')
+print(total)
+output: insert another first string here : hello NaN, then second word here hello world
+
 ```
