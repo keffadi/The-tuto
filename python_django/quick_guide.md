@@ -38,6 +38,24 @@ total = 'abcde'
 print(total[:1])
 output: a
 
-[1:] position 1 is included in output  / [:1] position 1 is not included in output
+total = 'abcde'
+print(total[1:3])
+output: bc
 
+[1:] FROM position 1 is included in output  / [:1] UP TO position 1 is not included in output
+
+total = 'abcdef'
+print(total[::2])
+output: ace  # write first index, then jump second index, write third, then jump fourth ........
+total = 'abcdef'
+print(total[::3])
+output: ad   # write, jump, jump, write, jump, jump
+```
+Upper, Lower
+```
+total = 'abcdef'
+new_var = total.upper()
+print(new_var)
+
+upper can be: lower, split, replace ...........
 ```
