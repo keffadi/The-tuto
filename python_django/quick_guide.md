@@ -168,7 +168,7 @@ myDict[01_Mai] = "ANY"  # can be use to update a value or add "key":"value"
 TUPLEs, SETs and BOOLEANs
 ```
 my_tuple = (1, "ok", "olivier")  # is immutable, can't be modify
-thisset = {"apple", "banana", "cherry"}    # You cannot access items in a set by referring to an index, unordered.
+thisset = {"apple", "banana", "cherry"}    #You cant access items in a set by referring to an index, ''unordered''. bracket as Dict, take unique element, cant take two same item
 Boolean are just true or false
 
 my_tuple = (1, "ok", "olivier")
@@ -181,8 +181,36 @@ mySet.add('malouda')
 print(mySet)
 output: {'malouda', 'keffa'}
 
+converted list to set  
+converted = set([1,1,1,2,2,3,4])
+print(converted)
+output: {1, 2, 3, 4}
 
 
+```
+
+Control flow
+```
+if 1<2:
+    print("yes!")
+elif 1==2:
+    print("Equal")
+else:
+    print("Noo!")
+output: yes!
+
+# here the blockote {} is recognized by indentation, and python use :  as ;
+
+# Loop
+seq = [1,2,3,4,2,9,10]
+for item in seq:
+    print(item)
+output: 1
+2
+3.....
+
+
+ 
 
 ```
 
