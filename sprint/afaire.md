@@ -42,7 +42,7 @@ appliquer les changement avec:
 dscacheutil -flushcache
 ```
 
-http://localhost
+http://localhost      
 http://localhost/admin
 
 ADMIN_USERNAME=admin     
