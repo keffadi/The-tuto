@@ -18,6 +18,12 @@ docker load -i imagemysql
 docker load -i imagephpmyadmin
 ```
 ```
+docker import - docker-magento2_web_1
+docker import - docker-magento2_phpmyadmin_1
+docker import - docker-magento2_db_1
+```
+
+```
 docker run -i -t docker-magento2_web_1 /bin/bash
 docker run -i -t docker-magento2_phpmyadmin_1 /bin/bash
 docker run -i -t docker-magento2_db_1 /bin/bash
