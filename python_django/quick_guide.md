@@ -202,13 +202,20 @@ output: yes!
 # here the blockote {} is recognized by indentation, and python use :  as ;
 
 # Loop
-seq = [1,2,3,4,2,9,10]
+seq = [1,2,3,4,2,9,10]    # for seq = {"dicti":1}, the output will be the key dicti and ''unordered''
 for item in seq:
     print(item)
 output: 1
 2
-3.....
+3.....   
 
+seq = {"01_Mai":"Mercredi","02_Mai":"jeudi","03_Mai":"Vendredi","key4":2020}
+for item in seq:
+    print(item)
+    print(seq['01_Mai'])
+output: 01_Mai
+Mercredi
+02_Mai ......
 
  
 
