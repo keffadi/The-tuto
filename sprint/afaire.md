@@ -45,7 +45,7 @@ dscacheutil -flushcache
 http://localhost
 http://localhost/admin
 
-ADMIN_USERNAME=admin
+ADMIN_USERNAME=admin     
 ADMIN_PASSWORD=magentorocks1
 
 
