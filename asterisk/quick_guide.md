@@ -40,6 +40,7 @@ cd ~/src/asterisk-complete/asterisk/13
  make config
 
  ```
+ in Case in Bluetooth
   ```
  cd ~/src/asterisk-complete/asterisk/13/ 
  sudo apt-get install libnewt-dev
