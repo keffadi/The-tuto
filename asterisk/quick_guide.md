@@ -20,7 +20,7 @@ adduser asteriskpbx    ( after password prompt: asteriskpbx)
 
 install dependancies
 ```
-apt-get install build-essential subversion  libncurses5-dev libssl-dev libxml2-dev libsqlite3-dev uuid-dev vim-nox
+apt-get install build-essential subversion  libncurses5-dev libssl-dev libxml2-dev libsqlite3-dev uuid-dev vim-nox libjansson-dev
 ```
 
 
@@ -28,12 +28,12 @@ Create your directory structure & download source
 ```
 mkdir -p ~/src/asterisk-complete/asterisk 
 cd ~/src/asterisk-complete/asterisk
-svn co http://svn.asterisk.org/svn/asterisk/branches/11
+svn co http://svn.asterisk.org/svn/asterisk/branches/13
 ```
 
 installation
 ```
-cd ~/src/asterisk-complete/asterisk/11
+cd ~/src/asterisk-complete/asterisk/13
  ./configure
  make
  make install 
@@ -41,7 +41,7 @@ cd ~/src/asterisk-complete/asterisk/11
 
  ```
   ```
- cd ~/src/asterisk-complete/asterisk/11/ 
+ cd ~/src/asterisk-complete/asterisk/13/ 
  sudo apt-get install libnewt-dev
  sudo apt-get install libbluetooth-dev
  cd menuselect
