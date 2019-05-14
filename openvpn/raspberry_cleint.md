@@ -12,3 +12,8 @@ reboot
 ```
 curl ipinfo.io
 ```
+
+
+
+other way to do
+https://www.octanevpn.com/tutorials/setup-guide-for-openvpn-on-ubuntu.html
