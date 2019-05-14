@@ -1,5 +1,5 @@
 
-## 1- connection d'un raspdebian à un server openvpn
+## 1- connection d'un raspdebian / ubuntu  à un server openvpn
 ```
 sudo -s
 apt-get update && apt-get install openvpn
