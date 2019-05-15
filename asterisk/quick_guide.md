@@ -16,3 +16,5 @@ apt-get install ntp
 
 ```
 
+https://computingforgeeks.com/how-to-install-asterisk-16-lts-on-ubuntu-18-04-16-04-debian-9/
+
