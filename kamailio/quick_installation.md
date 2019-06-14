@@ -12,3 +12,5 @@ https://computingforgeeks.com/how-to-install-latest-kamailio-sip-server-on-ubunt
 kamctl add username password email  (yebe/yebe   & keffa/keffa )
 apt-get install ngrep
 ```
+il manque:
+apt install libmariadb-dev default-libmysqlclient-dev
