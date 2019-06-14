@@ -13,4 +13,4 @@ kamctl add username password email  (yebe/yebe   & keffa/keffa )
 apt-get install ngrep
 ```
 il manque:
-apt install libmariadb-dev default-libmysqlclient-dev
+apt install libmariadb-dev default-libmysqlclient-dev mariadb-client-10.1
