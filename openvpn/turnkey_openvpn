@@ -2,3 +2,7 @@
 
 https://www.turnkeylinux.org/openvpn  ( use iso in proxmox) - server 
 openvpn-addclient client1 client1@example.com
+
+
+==> a tester
+http://dnaeon.github.io/static-ip-addresses-in-openvpn/
