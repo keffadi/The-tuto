@@ -12,5 +12,10 @@ https://computingforgeeks.com/how-to-install-latest-kamailio-sip-server-on-ubunt
 kamctl add username password email  (yebe/yebe   & keffa/keffa )
 apt-get install ngrep
 ```
-il manque:
+```
+Install rtproxy from old quick-installation
+```
+
+
+il manque sur Bionic:
 apt install libmariadb-dev default-libmysqlclient-dev mariadb-client-10.1
