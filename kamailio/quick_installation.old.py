@@ -182,6 +182,10 @@ route[CDRS] {
  
 }
 
+
+read
+https://github.com/asipto/siremis/blob/master/siremis/modules/sipadmin/mod.install.siremis.sql#L156
+http://kb.asipto.com/siremis:install53x:accounting
 -------ok
 
 # ----- tm params -----
