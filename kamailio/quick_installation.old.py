@@ -63,7 +63,7 @@ nano /etc/default/kamailio   (RUN_KAMAILIO=yes & user & group & shm & pkg & CFGF
 
 mkdir -p /var/run/kamailio
 adduser --quiet --system --group --disabled-password --shell /bin/false --gecos "Kamailio" --home /var/run/kamailio kamailio
-chown kamailio:kamailio /var/run/kamailio
+chown -R kamailio:kamailio /var/run/kamailio
 
 nano /etc/systemd/system/kamailio.service   {
 Kamailio.service:
