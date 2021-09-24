@@ -1,0 +1,21 @@
+
+
+https://www.turnkeylinux.org/openvpn  ( use iso in proxmox) - server 
+openvpn-addclient client1 client1@example.com
+
+
+==> a tester
+http://dnaeon.github.io/static-ip-addresses-in-openvpn/
+
+FIXED IP FOR CLIENT:
+
+cd /etc/openvpn/server.ccd/server.ccd/
+sudo touch client1
+ifconfig-push 10.1.32.10 10.1.32.1
+
+nano ifconfig-pool-persist /var/lib/openvpn/server.ipp
+client1,10.1.32.10
+
+$ service openvpn restart
+
+

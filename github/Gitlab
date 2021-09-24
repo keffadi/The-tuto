@@ -1,0 +1,19 @@
+01-  Générer une clée sur mon imac si c'est pas encore fait
+    Vérifier s'il y a une clée existante:  cd ~/.ssh && ls
+    Créer une clée: cd ~/.ssh && ssh-keygen
+                  cat id_rsa.pub   ( copy)
+                  mettre dans user/setting, ssh key sur website gitlab
+                  
+02- Cloné le nouveau Projet créer sur Gitlab
+    git clone git@gitlab.com/monproject01
+    
+    
+03- Entré en l'interieur du projet pour configurer gitlab    
+    cd monproject01
+    git config --global user.email "equipedjango@nan.ci"   (une fois sur une nouvelle machine)
+    git config --global user.name "equipedjango"  (une fois sur une nouvelle machine)
+    git init 
+    git add . 
+    git commit -m "Add existing file"
+    git remote add origin git@gitlab.com/alcall225/monproject01.git
+    git push -u origin master (fetch / pull = fetch and merge)
